@@ -34,6 +34,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Pack NuGet Package'
   inputs:
     command: 'pack'
     packagesToPack: '**/StringLibrary.csproj'
@@ -43,6 +44,7 @@ steps:
     patchVersion: '0'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Push NuGet Package to Artifacts'
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
