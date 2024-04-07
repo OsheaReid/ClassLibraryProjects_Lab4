@@ -1,12 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Authors>Oshea Reid</Authors>
-    <Company>OR Inc</Company>
-    <Description>Lab4 Question 1 for devops</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StringLibrary" Version="1.0.0-CI-20240407-214049" />
+  </ItemGroup>
 
 </Project>
